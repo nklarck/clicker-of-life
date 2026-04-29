@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://dodiucnf1gmw8"]
+
+[ext_resource type="Script" uid="uid://b6nnyuhklh1e4" path="res://enhancement_button.gd" id="1_wdtuv"]
+[ext_resource type="Texture2D" uid="uid://c3pchhs4xt7xk" path="res://Assets/Textures/EndocytosisClickEnhancement.png" id="2_fu78x"]
+[ext_resource type="FontFile" uid="uid://7hjjim1xj2q5" path="res://Assets/Fonts/rajdhani.bold.ttf" id="3_fu78x"]
+[ext_resource type="FontFile" uid="uid://c52kg3n2yxub" path="res://Assets/Fonts/nunito.regular.ttf" id="4_7raoi"]
+[ext_resource type="FontFile" uid="uid://ou7y45ko3yx2" path="res://Assets/Fonts/nunito.bold.ttf" id="5_fvlxw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu78x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jn4u"]
+bg_color = Color(0.11764706, 0.22745098, 0.37254903, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.22745098, 0.49803922, 0.7490196, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toowp"]
+bg_color = Color(0.08235294, 0.16470589, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.37254903, 0.56078434, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcf56"]
+bg_color = Color(0.16470589, 0.32156864, 0.59607846, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3529412, 0.7490196, 1, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7raoi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5is2"]
+bg_color = Color(0.101960786, 0.16470589, 0.22745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.22745098, 0.2901961, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kcf56"]
+
+[node name="EnhancementButton" type="PanelContainer" unique_id=1499227939]
+offset_right = 256.0
+offset_bottom = 86.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fu78x")
+script = ExtResource("1_wdtuv")
+
+[node name="Button" type="Button" parent="." unique_id=613824892]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+theme_override_styles/normal = SubResource("StyleBoxFlat_1jn4u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_toowp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kcf56")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_7raoi")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_o5is2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kcf56")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1821854710]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer" unique_id=1690217380]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="Icon" type="TextureRect" parent="HBoxContainer/MarginContainer3" unique_id=824517699]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+texture = ExtResource("2_fu78x")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1897382678]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer" unique_id=114911451]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="Name" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer" unique_id=179819052]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.95686275, 0.972549, 1)
+theme_override_fonts/font = ExtResource("3_fu78x")
+theme_override_font_sizes/font_size = 18
+text = "Endocytosis"
+vertical_alignment = 3
+
+[node name="Cost" type="Label" parent="HBoxContainer/MarginContainer/VBoxContainer" unique_id=1789745638]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.65882355, 0.84705883, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("4_7raoi")
+theme_override_font_sizes/font_size = 15
+text = "Cost: 10
+"
+vertical_alignment = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=2083629238]
+modulate = Color(1, 1, 1, 0.5372549)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_right = 8
+
+[node name="Count" type="Label" parent="HBoxContainer/MarginContainer2" unique_id=299854248]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.9411765, 0.7882353, 0.41568628, 1)
+theme_override_fonts/font = ExtResource("5_fvlxw")
+theme_override_font_sizes/font_size = 24
+text = "0"

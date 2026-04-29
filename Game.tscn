@@ -1,0 +1,397 @@
+[gd_scene format=3 uid="uid://brwq8hdialc2m"]
+
+[ext_resource type="Script" uid="uid://0jt8h6wvn61k" path="res://game.gd" id="1_wbfu4"]
+[ext_resource type="Script" uid="uid://dg0061a4vwj4j" path="res://enhancement.gd" id="2_joorw"]
+[ext_resource type="Texture2D" uid="uid://b070hyqs0quia" path="res://Assets/Textures/RibosomeEnhancement.png" id="3_2vekm"]
+[ext_resource type="Texture2D" uid="uid://cuu0xxxgehu3p" path="res://Assets/Textures/PseudopodEnhancement.png" id="3_qjyg3"]
+[ext_resource type="Texture2D" uid="uid://dosncq7qvhxm3" path="res://Assets/Textures/MitochondriaEnhancement.png" id="4_yx171"]
+[ext_resource type="Texture2D" uid="uid://gm3ra8jdgbft" path="res://Assets/Textures/ChloroplastEnhancement.png" id="5_yhmtn"]
+[ext_resource type="Texture2D" uid="uid://dfrfolxf5e8f5" path="res://Assets/Textures/FlagellumEnhancement.png" id="6_gwjdr"]
+[ext_resource type="Texture2D" uid="uid://bj0qbxtyxtmr5" path="res://Assets/Textures/VacuoleEnhancement.png" id="7_lvtmh"]
+[ext_resource type="Texture2D" uid="uid://c5nirdhem65qj" path="res://Assets/Textures/NucleusEnhancement.png" id="8_yyih5"]
+[ext_resource type="Texture2D" uid="uid://37dt3bsy656e" path="res://Assets/Textures/GolgiEnhancement.png" id="10_elkpi"]
+[ext_resource type="Texture2D" uid="uid://c0mkft44i0jmk" path="res://Assets/Textures/Background2.png" id="10_yhmtn"]
+[ext_resource type="Texture2D" uid="uid://b5tn6i42beu4i" path="res://Assets/Textures/AmoebaLevel1.png" id="10_yx171"]
+[ext_resource type="Texture2D" uid="uid://cjpngimx8w3qx" path="res://Assets/Textures/CentrosomeEnhancement.png" id="11_0yprl"]
+[ext_resource type="Texture2D" uid="uid://b32pt3t5hgu6h" path="res://Assets/Textures/PeroxisomeEnhancement.png" id="12_wuoie"]
+[ext_resource type="Script" uid="uid://b62rvy1cja68u" path="res://evolution.gd" id="13_jsoai"]
+[ext_resource type="Texture2D" uid="uid://6ojwvriqwyh6" path="res://Assets/Textures/AmoebaLevel2.png" id="14_bisgb"]
+[ext_resource type="Texture2D" uid="uid://bkaplfdemswo2" path="res://Assets/Textures/ViewportFrame4.png" id="14_bvhbk"]
+[ext_resource type="Texture2D" uid="uid://ckafqbvc188ju" path="res://Assets/Textures/Separator5.png" id="14_cpsxm"]
+[ext_resource type="Texture2D" uid="uid://byat2y5is5l5x" path="res://Assets/Textures/ADNversion5.png" id="15_0yprl"]
+[ext_resource type="Texture2D" uid="uid://2vnwl3i5jkqg" path="res://Assets/Textures/AmoebaLevel3.png" id="15_y5ctq"]
+[ext_resource type="Texture2D" uid="uid://c0lpubmq0jbqd" path="res://Assets/Textures/AmoebaLevel4.png" id="16_w7ht3"]
+[ext_resource type="FontFile" uid="uid://bhvnkfnaimkpv" path="res://Assets/Fonts/ShareTechMono-Regular.ttf" id="17_7ged1"]
+[ext_resource type="AudioStream" uid="uid://cr7jca4dtv4kx" path="res://Assets/Audio/Abstract2.wav" id="20_cpsxm"]
+[ext_resource type="AudioStream" uid="uid://puhewpt82tb5" path="res://Assets/Audio/Minimalist3.wav" id="21_7ged1"]
+[ext_resource type="AudioStream" uid="uid://brplacfmwkm1o" path="res://Assets/Audio/Background/Drifting Memories.ogg" id="21_hmewc"]
+
+[sub_resource type="Resource" id="Resource_yhmtn"]
+script = ExtResource("2_joorw")
+name = "Pseudopod (click)"
+icon = ExtResource("3_qjyg3")
+type = "Click"
+unlocked = true
+mysterious = false
+value = 1.0
+cost = 10.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_qjyg3"]
+script = ExtResource("2_joorw")
+name = "Ribosome"
+icon = ExtResource("3_2vekm")
+unlocked = true
+mysterious = false
+value = 1.0
+cost = 50.0
+unlock_cost = 25.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_elkpi"]
+script = ExtResource("2_joorw")
+name = "Mitochondria"
+icon = ExtResource("4_yx171")
+value = 5.0
+cost = 150.0
+unlock_cost = 75.0
+visibility_cost = 10.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_0yprl"]
+script = ExtResource("2_joorw")
+name = "Chloroplast"
+icon = ExtResource("5_yhmtn")
+value = 15.0
+cost = 2000.0
+unlock_cost = 1000.0
+visibility_cost = 50.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_wuoie"]
+script = ExtResource("2_joorw")
+name = "Flagellum"
+icon = ExtResource("6_gwjdr")
+value = 40.0
+cost = 8000.0
+unlock_cost = 4000.0
+visibility_cost = 150.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_bvhbk"]
+script = ExtResource("2_joorw")
+name = "Vacuole"
+icon = ExtResource("7_lvtmh")
+value = 100.0
+cost = 30000.0
+unlock_cost = 15000.0
+visibility_cost = 2000.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_cpsxm"]
+script = ExtResource("2_joorw")
+name = "Nucleus"
+icon = ExtResource("8_yyih5")
+value = 250.0
+cost = 100000.0
+unlock_cost = 50000.0
+visibility_cost = 8000.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_hmewc"]
+script = ExtResource("2_joorw")
+name = "Golgi"
+icon = ExtResource("10_elkpi")
+value = 400.0
+cost = 400000.0
+unlock_cost = 200000.0
+visibility_cost = 30000.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_7ged1"]
+script = ExtResource("2_joorw")
+name = "Centrosome"
+icon = ExtResource("11_0yprl")
+value = 800.0
+cost = 2000000.0
+unlock_cost = 1000000.0
+visibility_cost = 200000.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_0mevm"]
+script = ExtResource("2_joorw")
+name = "Peroxisome"
+icon = ExtResource("12_wuoie")
+value = 2000.0
+cost = 4000000.0
+unlock_cost = 2000000.0
+visibility_cost = 800000.0
+metadata/_custom_type_script = "uid://dg0061a4vwj4j"
+
+[sub_resource type="Resource" id="Resource_8ktx7"]
+script = ExtResource("13_jsoai")
+name = "Membrane Reinforcement"
+icon = ExtResource("14_bisgb")
+description = "Your cell develops a stronger membrane, organizing its internal structure. All DNA production x1.3"
+multiplier = 1.3
+cost = 60000.0
+visibility_cost = 30000.0
+metadata/_custom_type_script = "uid://b62rvy1cja68u"
+
+[sub_resource type="Resource" id="Resource_hwsgv"]
+script = ExtResource("13_jsoai")
+name = "Organelle Complexity"
+icon = ExtResource("15_y5ctq")
+description = "A flagellum emerges and internal organelles multiply, boosting cellular efficiency. All DNA production x1.5"
+multiplier = 1.5
+cost = 600000.0
+visibility_cost = 300000.0
+metadata/_custom_type_script = "uid://b62rvy1cja68u"
+
+[sub_resource type="Resource" id="Resource_gebyw"]
+script = ExtResource("13_jsoai")
+name = "Eukaryotic Mastery"
+icon = ExtResource("16_w7ht3")
+description = "Your cell reaches full eukaryotic complexity, with a defined nucleus and chloroplasts. All DNA production x2"
+multiplier = 2.0
+cost = 6500000.0
+visibility_cost = 2500000.0
+metadata/_custom_type_script = "uid://b62rvy1cja68u"
+
+[sub_resource type="Animation" id="Animation_bvhbk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonAmoeba:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ButtonAmoeba:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_cpsxm"]
+resource_name = "amoeba_idle"
+length = 3.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonAmoeba:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.03, 1.03), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ButtonAmoeba:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6, 2.4, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.02617994, 0.0, -0.02617994, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hmewc"]
+_data = {
+&"RESET": SubResource("Animation_bvhbk"),
+&"amoeba_idle": SubResource("Animation_cpsxm")
+}
+
+[node name="Game" type="Control" unique_id=1972520114]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wbfu4")
+generators = Array[ExtResource("2_joorw")]([SubResource("Resource_yhmtn"), SubResource("Resource_qjyg3"), SubResource("Resource_elkpi"), SubResource("Resource_0yprl"), SubResource("Resource_wuoie"), SubResource("Resource_bvhbk"), SubResource("Resource_cpsxm"), SubResource("Resource_hmewc"), SubResource("Resource_7ged1"), SubResource("Resource_0mevm")])
+evolutions = Array[ExtResource("13_jsoai")]([SubResource("Resource_8ktx7"), SubResource("Resource_hwsgv"), SubResource("Resource_gebyw")])
+
+[node name="GameBackground" type="TextureRect" parent="." unique_id=318532620]
+modulate = Color(0.9217038, 0.9217038, 0.9217038, 0.6117647)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_yhmtn")
+expand_mode = 1
+
+[node name="StoreSeparator" type="TextureRect" parent="." unique_id=644658089]
+modulate = Color(1, 1, 1, 0.8352941)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.717
+anchor_right = 0.73600006
+anchor_bottom = 1.0
+offset_left = 0.015991211
+offset_right = 0.12792969
+texture = ExtResource("14_cpsxm")
+
+[node name="Viewport" type="TextureRect" parent="." unique_id=1250483074]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("14_bvhbk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Viewport" unique_id=831585544]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 25.0
+offset_right = 253.0
+offset_bottom = 79.0
+
+[node name="TextureRect" type="TextureRect" parent="Viewport/HBoxContainer" unique_id=1534234922]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("15_0yprl")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Viewport/HBoxContainer" unique_id=1403849133]
+layout_mode = 2
+theme_override_constants/separation = -2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Viewport/HBoxContainer/VBoxContainer" unique_id=15022563]
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ADNText" type="Label" parent="Viewport/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=420569303]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.65882355, 0.84705883, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("17_7ged1")
+theme_override_font_sizes/font_size = 28
+text = "DNA:"
+vertical_alignment = 1
+
+[node name="ADNcountLabel" type="Label" parent="Viewport/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1088461480]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(115, 0)
+layout_direction = 3
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.9411765, 0.7882353, 0.41568628, 1)
+theme_override_fonts/font = ExtResource("17_7ged1")
+theme_override_font_sizes/font_size = 28
+text = "0"
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Viewport/HBoxContainer/VBoxContainer" unique_id=867765618]
+layout_mode = 2
+
+[node name="ADNperSecondText" type="Label" parent="Viewport/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1365535788]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65882355, 0.84705883, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("17_7ged1")
+theme_override_font_sizes/font_size = 24
+text = "/s:"
+
+[node name="ADNperSecondLabel" type="Label" parent="Viewport/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1425832948]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.9098039, 0.95686275, 0.972549, 1)
+theme_override_fonts/font = ExtResource("17_7ged1")
+theme_override_font_sizes/font_size = 24
+text = "0"
+
+[node name="ButtonAmoeba" type="TextureButton" parent="." unique_id=1539538116]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36100003
+anchor_top = 0.505
+anchor_right = 0.36100003
+anchor_bottom = 0.505
+offset_left = -120.87204
+offset_top = -122.23999
+offset_right = 116.12796
+offset_bottom = 116.76001
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_yx171")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="StoreControl" type="Control" parent="." unique_id=593026096]
+layout_mode = 1
+anchor_left = 0.7361111
+anchor_top = 0.027777778
+anchor_right = 0.9826389
+anchor_bottom = 0.97530866
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="StoreControl" unique_id=1745377236]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0070423
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainerEnhancement" type="ScrollContainer" parent="StoreControl/MarginContainer" unique_id=692435778]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/scroll_hint_vertical_color = Color(0.16470589, 0.37254903, 0.56078434, 1)
+theme_override_colors/scroll_hint_horizontal_color = Color(0.16470589, 0.37254903, 0.56078434, 1)
+
+[node name="EnhancementButtonsContainer" type="VBoxContainer" parent="StoreControl/MarginContainer/ScrollContainerEnhancement" unique_id=1978868255]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="AmoebaIdleAnimation" type="AnimationPlayer" parent="." unique_id=452575650]
+libraries/ = SubResource("AnimationLibrary_hmewc")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=1544533137]
+stream = ExtResource("20_cpsxm")
+
+[node name="MusicSound" type="AudioStreamPlayer" parent="." unique_id=1511106486]
+stream = ExtResource("21_hmewc")
+autoplay = true
+bus = &"Background"
+parameters/looping = true
+
+[node name="PurchaseSound" type="AudioStreamPlayer" parent="." unique_id=1409218519]
+stream = ExtResource("21_7ged1")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b1clchxf4t1il"
+path="res://.godot/imported/Pineapple Under The Sea.ogg-3e8f41b87c760f7c4c92b937348c441a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Background/Pineapple Under The Sea.ogg"
+dest_files=["res://.godot/imported/Pineapple Under The Sea.ogg-3e8f41b87c760f7c4c92b937348c441a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
