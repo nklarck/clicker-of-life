@@ -15,3 +15,11 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+WebExport/
+WebExport2/
+WebExport3/
+LifeClickerWebExport.zip
+LifeClickerWebExport2.zip
+LifeClickerWebExport3.zip
+*.pck
